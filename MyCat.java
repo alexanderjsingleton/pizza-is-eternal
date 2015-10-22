@@ -13,5 +13,14 @@ public class MyCat extends Cat
      */
     public void act()
     {
+        pace();
+
     }    
+
+    public void pace()
+    {
+        walkLeft(5);
+        walkRight(10);
+        walkLeft(5);
+    }
 }

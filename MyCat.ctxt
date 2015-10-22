@@ -1,5 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ MyCat\ wants\ to\ do.\r\n
-numComments=1
+comment0.text=\n\ Act\ -\ do\ whatever\ the\ MyCat\ wants\ to\ do.\n
+comment1.params=
+comment1.target=void\ pace()
+numComments=2
