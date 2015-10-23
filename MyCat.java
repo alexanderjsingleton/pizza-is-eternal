@@ -13,14 +13,63 @@ public class MyCat extends Cat
      */
     public void act()
     {
-        pace();
+        // pace(5);
+        //why do the two walkLeft method calls have numberSteps?
+        //DOY: **must backtrack** => but the walkRight method call has   2 * numberSteps ( * is the symbol for multiplication)
+        checkForKeyPress();
+        checkForPizza();
+    }   
 
-    }    
-
-    public void pace()
+    public void orderOutForPizza()
     {
-        walkLeft(5);
-        walkRight(10);
-        walkLeft(5);
+        World myWorldAssistant = getWorld(); // need a world object to call world methods
+
+        int worldWidth = myWorldAssistant.getWidth();
+        int worldHeight = myWorldAssistant.getHeight();
+        myWorldAssistant.addObject( new Pizza(), 
+            Greenfoot.getRandomNumber(worldWidth),
+            Greenfoot.getRandomNumber(worldHeight));
     }
+
+    public void pace(int numberSteps)
+    {
+
+    }
+
+    public void checkForPizza()
+    {
+        if ( isTouching(Pizza.class) )
+        {
+            removeTouching(Pizza.class);
+            eat();
+            orderOutForPizza();
+
+        }
+    }
+
+    public void jumpUpAndDown()
+    {
+        int amount = getImage().getHeight();    // height of the jump is 1/2 height of cat image height
+        setLocation(getX(),getY() - amount);
+        checkForPizza();
+        wait(10);
+        setLocation(getX(),getY() + amount);
+    }
+
+    public void checkForKeyPress() // NOTE if key is held down the action continues for left and right arrow keys
+    {
+        if ( Greenfoot.isKeyDown("left") ) 
+        {
+            walkLeft(2);
+        }
+        if ( Greenfoot.isKeyDown("right") ) 
+        {
+            walkRight(2);
+        }
+        if ( Greenfoot.isKeyDown("up")) 
+        {
+            jumpUpAndDown();
+        }
+    }
+
 }

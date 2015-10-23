@@ -17,6 +17,6 @@ public class CatWorld  extends World
     {    
         // Create a new world with 20x20 cells with a cell size of 10x10 pixels.
         super(600, 340, 1);
-        addObject (new MyCat(), 300, 200);
+        addObject (new MyCat(), 300, 250);
     }
 }
