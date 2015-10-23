@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Oct 22 19:13:29 CDT 2015
+#Thu Oct 22 19:19:53 CDT 2015
 target4.type=ClassTarget
 target3.height=50
 target1.editor.y=37
@@ -75,6 +75,6 @@ target3.name=CatWorld
 target1.editor.width=791
 readme.editor.width=698
 target3.naviview.expanded=true
-project.charset=UTF-8
 target3.width=80
+project.charset=UTF-8
 target4.showInterface=false
