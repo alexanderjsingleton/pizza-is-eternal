@@ -18,8 +18,12 @@ public class MyCat extends Cat
         //DOY: **must backtrack** => but the walkRight method call has   2 * numberSteps ( * is the symbol for multiplication)
         checkForKeyPress();
         checkForPizza();
-    }   
+        if ( Greenfoot.getRandomNumber(100) < 2 )
+        {
+            sleep(1);
+        }
 
+    }   
     public void orderOutForPizza()
     {
         World myWorldAssistant = getWorld(); // need a world object to call world methods
